@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+.ant-layout {
+  height: 100%;
+}
+
+.ant-layout-header {
+  background-color: #1f99b0 !important;
+  color: #fff;
+  font-size: 20px;
+}

@@ -18,13 +18,15 @@ class AdvertisementNode extends Component {
     }
 
     init(){
-        axios.get('https://movie.lc1017.com/api/admin/v1/advertisements').then(res => {
+        axios.get('http://cmovie.holyzq.com/api/admin/v1/advertisements').then(res => {
             console.log(res)
             this.setState({
                 advertisement: res.data.data
             })
         })
     }
+
+
 
     columns = () => [{
         title: 'id',
@@ -57,7 +59,7 @@ class AdvertisementNode extends Component {
 
     deleteRow(text) {
         console.log(text)
-                axios.delete(`https://movie.lc1017.com/api/admin/v1/advertisements/${text.id}`).then(res=>{
+                axios.delete(`http://cmovie.holyzq.com/api/admin/v1/advertisements/${text.id}`).then(res=>{
                     this.init()
                 })
     }

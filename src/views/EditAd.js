@@ -28,9 +28,10 @@ class Edit extends Component {
     componentDidMount(){
         // console.log(this.props.location.state)
         console.log(this.props.match.params.id)
+
         let id =this.props.match.params.id
 
-        axios.get(`https://movie.lc1017.com/api/admin/v1/advertisements/${id}/edit`).then(res => {
+        axios.get(`http://cmovie.holyzq.com/api/admin/v1/advertisements/${id}/edit`).then(res => {
             console.log(res)
             this.setState({
                 form: res.data.data.advertisement
@@ -44,7 +45,7 @@ class Edit extends Component {
                 if (!err) {
                     console.log(values)
                     let id =this.props.match.params.id
-                    axios.put(`https://movie.lc1017.com/api/admin/v1/advertisements/${id}`,values).then(res=>{
+                    axios.put(`http://cmovie.holyzq.com/api/admin/v1/advertisements/${id}`,values).then(res=>{
                         this.props.history.push('/advertisement_nodes')
                     })
                 }
@@ -113,7 +114,7 @@ class Edit extends Component {
                 </FormItem>
                 <FormItem {...formTailLayout}>
                     <Button type="primary" onClick={this.onSubmit}>
-                        更新数据
+                        更新
                     </Button>
                 </FormItem>
             </div>

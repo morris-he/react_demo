@@ -28,7 +28,7 @@ class Create extends Component {
             (err,values) => {
                 if (!err) {
                     console.log(values)
-                    axios.post(`https://movie.lc1017.com/api/admin/v1/advertisements`,values).then(res=>{
+                    axios.post(`http://cmovie.holyzq.com/api/admin/v1/advertisements`,values).then(res=>{
                         this.props.history.push('/advertisement_nodes')
                     })
                 }
@@ -47,7 +47,6 @@ class Create extends Component {
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
-
             <div>
                 <FormItem {...formItemLayout} label="名称">
                     {getFieldDecorator('name', {
@@ -116,6 +115,7 @@ class Create extends Component {
         );
     }
 }
+
 
 const WrappedApp = Form.create()(Create);
 

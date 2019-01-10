@@ -75,12 +75,14 @@ class App extends Component {
                                 <Breadcrumb.Item>App</Breadcrumb.Item>
                             </Breadcrumb>
                             <Content style={{background: '#fff', padding: 24, margin: 0, minHeight: 280}}>
+
                                 <Switch>
                                     <Route exact path="/" component={Home}/>
                                     <Route exact path="/advertisement_nodes" component={AdvertisementNode}/>
-                                    <Route exact path="/advertisement_nodes/create" component={CreateAdNode}/>
-                                    <Route exact path="/advertisement_nodes/edit/:id" component={EditAd}/>
+                                    <Route  path="/advertisement_nodes/create" component={CreateAdNode}/>
+                                    <Route  path="/advertisement_nodes/edit/:id" component={EditAd}/>
                                 </Switch>
+
                             </Content>
                         </Layout>
                     </Layout>

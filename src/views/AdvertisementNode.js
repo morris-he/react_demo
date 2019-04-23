@@ -14,10 +14,6 @@ class AdvertisementNode extends Component {
     }
 
     componentDidMount() {
-        this.init()
-    }
-
-    init(){
         axios.get('http://cmovie.holyzq.com/api/admin/v1/advertisements').then(res => {
             console.log(res)
             this.setState({
@@ -26,7 +22,9 @@ class AdvertisementNode extends Component {
         })
     }
 
+    init(){
 
+    }
 
     columns = () => [{
         title: 'id',

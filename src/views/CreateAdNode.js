@@ -116,7 +116,6 @@ class Create extends Component {
     }
 }
 
-
 const WrappedApp = Form.create()(Create);
 
 export default WrappedApp;
